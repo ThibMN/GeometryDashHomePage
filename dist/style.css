@@ -13,24 +13,23 @@ header {
 }
 
 .dlButton {
-  background-color: #ffcc00; /* Bright yellow color */
-  border: 2px solid #ff6600; /* Orange border */
-  border-radius: 10px; /* Rounded corners */
-  color: #ffffff; /* White text */
-  font-family: 'Arial', sans-serif; /* Simple font */
-  font-size: 16px; /* Medium font size */
-  padding: 10px 20px; /* Padding for the button */
-  text-transform: uppercase; /* Uppercase text */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  background-color: #89f238;
+  border: 2px solid #60aa26;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color: #ff9900; /* Darker yellow on hover */
+    background-color: #6ec12e; /* Darker yellow on hover */
     transform: scale(1.05); /* Slightly larger on hover */
   }
 
   &:active {
-    background-color: #cc7a00; /* Even darker yellow on click */
+    background-color: #599d25; /* Even darker yellow on click */
     transform: scale(0.95); /* Slightly smaller on click */
   }
 }

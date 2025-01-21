@@ -15,10 +15,12 @@ const platformURLs = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    const downloadButton = document.querySelector('.dlButton button');
+    const downloadButtons = document.querySelectorAll('.dlButton');
     const platform = detectPlatform();
     
-    downloadButton.addEventListener('click', () => {
-        window.open(platformURLs[platform], '_blank');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            window.open(platformURLs[platform], '_blank');
+        });
     });
 });
