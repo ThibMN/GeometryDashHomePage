@@ -55,6 +55,33 @@ header {
   display: block;
 }
 
+#changeLog {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+#changeLog h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #003456;
+}
+
+#changeLog ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#changeLog li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333333;
+}
+
 #availiblePlatformsSVGs {
   display: flex;
   gap: 20px;
@@ -74,10 +101,11 @@ header {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
-  background-color: #003456;
+  background-color: #002843;
   color: #ffffff;
   width: 100%;
   bottom: 0;
@@ -87,4 +115,22 @@ footer {
 footer p {
   margin: 0;
   font-size: 14px;
+}
+
+#footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  }
+
+#footerLinks svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  transition: fill 0.3s, transform 0.3s;
+}
+
+#footerLinks svg:hover {
+  fill: #0288d0;
+  transform: scale(1.1);
 }
