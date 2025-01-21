@@ -11,7 +11,8 @@ body {
 
 header {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row-reverse;
+  justify-content: space-between;
 }
 
 .dlButton {
@@ -38,7 +39,8 @@ header {
 
 #headerButton {
   display: flex;
-  align-items: center;
+  flex-flow: row;
+  margin-left: 5vw;
 }
 
 #headerLogo {
