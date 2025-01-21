@@ -12,6 +12,14 @@ body {
 
 header {
   display: flex;
+  justify-content: space-evenly;
+  position: relative; /* Ajouté pour que le z-index fonctionne */
+  z-index: 10; /* Le header est devant */
+  margin-top: 80px;
+}
+
+#content {
+  margin-top: 130px;
   flex-flow: row-reverse;
   justify-content: space-between;
 }
@@ -58,10 +66,37 @@ header {
   display: block;
 }
 
+#changeLog {
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+#changeLog h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #003456;
+}
+
+#changeLog ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#changeLog li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333333;
+}
+
 #availiblePlatformsSVGs {
   display: flex;
   gap: 20px;
-  }
+}
 
 #availiblePlatformsSVGs svg {
   width: 40px;
@@ -77,10 +112,11 @@ header {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   padding: 20px;
-  background-color: #003456;
+  background-color: #002843;
   color: #ffffff;
   width: 100%;
   bottom: 0;
@@ -90,4 +126,54 @@ footer {
 footer p {
   margin: 0;
   font-size: 14px;
+}
+
+.carousel {
+  position: absolute; /* Permet de positionner le carrousel derrière le header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 1; /* Le carrousel est derrière le header */
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-carousel 20s linear infinite;
+}
+
+.carousel img {
+  flex-shrink: 0;
+  height: 250%;
+  width: 29%;
+  object-fit: contain;
+}
+
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+#footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  }
+
+#footerLinks svg {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  transition: fill 0.3s, transform 0.3s;
+}
+
+#footerLinks svg:hover {
+  fill: #0288d0;
+  transform: scale(1.1);
 }
