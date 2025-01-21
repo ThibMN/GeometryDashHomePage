@@ -1,0 +1,9 @@
+body{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#headerlogo{
+  margin-top: 10px;
+}
