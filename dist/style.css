@@ -196,6 +196,22 @@ footer p {
   }
 }
 
+#bottomButton {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  width: fit-content;
+  min-width: 200px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#bottomButton:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
 
 #footerLinks {
   display: flex;
