@@ -12,6 +12,13 @@ body {
 header {
   display: flex;
   justify-content: space-evenly;
+  position: relative; /* Ajouté pour que le z-index fonctionne */
+  z-index: 10; /* Le header est devant */
+  margin-top: 80px;
+}
+
+#content {
+  margin-top: 130px;
 }
 
 .dlButton {
@@ -56,7 +63,7 @@ header {
 #availiblePlatformsSVGs {
   display: flex;
   gap: 20px;
-  }
+}
 
 #availiblePlatformsSVGs svg {
   width: 40px;
@@ -88,40 +95,32 @@ footer p {
 }
 
 .carousel {
-  position: relative;
+  position: absolute; /* Permet de positionner le carrousel derrière le header */
+  top: 0;
+  left: 0;
   width: 100%;
-  /* Largeur du carrousel */
   height: 300px;
-  /* Hauteur fixe du carrousel */
+  z-index: 1; /* Le carrousel est derrière le header */
   overflow: hidden;
-  /* Masque les images qui dépassent */
 }
 
 .carousel-track {
   display: flex;
   animation: scroll-carousel 20s linear infinite;
-  /* Animation continue */
 }
 
 .carousel img {
   flex-shrink: 0;
-  /* Empêche les images de se rétrécir */
   height: 250%;
-  /* Remplir la hauteur du carrousel */
   width: 29%;
-  /* Largeur des images */
   object-fit: contain;
-  /* Contient les images sans déformation */
 }
 
-/* Animation pour le défilement continu */
 @keyframes scroll-carousel {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-100%);
-    /* Défilement horizontal sur tout le carrousel */
   }
 }
