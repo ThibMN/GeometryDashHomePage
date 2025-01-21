@@ -5,6 +5,7 @@ body {
   align-items: center;
 
   font-family: Helvetica;
+  color: #ffffff;
 
   background: linear-gradient(#0288d1, #003456);
 }
@@ -24,6 +25,8 @@ header {
   padding: 10px 20px;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: 26%;
+  height: 48%;
   transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
@@ -45,8 +48,8 @@ header {
 
 #headerLogo {
   margin-top: 10px;
-  max-width: 500px;    /* Limite la largeur maximale */
-  width: 90%;          /* Largeur responsive */
+  max-width: 75vw;    /* Limite la largeur maximale */
+  width: 85%;          /* Largeur responsive */
 }
 
 #headerLogo img {
