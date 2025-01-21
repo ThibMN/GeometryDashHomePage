@@ -58,15 +58,31 @@ header {
   gap: 20px;
   }
 
-  #availiblePlatformsSVGs svg {
-    width: 40px;
-    height: 40px;
-    fill: #ffffff;
-    transition: fill 0.3s, transform 0.3s;
-  }
+#availiblePlatformsSVGs svg {
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+  transition: fill 0.3s, transform 0.3s;
+}
 
-  #availiblePlatformsSVGs svg:hover {
-    fill: #89f238;
-    transform: scale(1.1);
-  }
+#availiblePlatformsSVGs svg:hover {
+  fill: #89f238;
+  transform: scale(1.1);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #003456;
+  color: #ffffff;
+  width: 100%;
+  bottom: 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
 }
