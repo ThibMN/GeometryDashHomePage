@@ -11,6 +11,14 @@ body {
 
 header {
   display: flex;
+  justify-content: space-evenly;
+  position: relative; /* Ajouté pour que le z-index fonctionne */
+  z-index: 10; /* Le header est devant */
+  margin-top: 80px;
+}
+
+#content {
+  margin-top: 130px;
   flex-flow: row-reverse;
   justify-content: space-between;
 }
@@ -85,7 +93,7 @@ header {
 #availiblePlatformsSVGs {
   display: flex;
   gap: 20px;
-  }
+}
 
 #availiblePlatformsSVGs svg {
   width: 40px;
@@ -116,6 +124,38 @@ footer p {
   margin: 0;
   font-size: 14px;
 }
+
+.carousel {
+  position: absolute; /* Permet de positionner le carrousel derrière le header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: 1; /* Le carrousel est derrière le header */
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-carousel 20s linear infinite;
+}
+
+.carousel img {
+  flex-shrink: 0;
+  height: 250%;
+  width: 29%;
+  object-fit: contain;
+}
+
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 #footerLinks {
   display: flex;
