@@ -86,3 +86,42 @@ footer p {
   margin: 0;
   font-size: 14px;
 }
+
+.carousel {
+  position: relative;
+  width: 100%;
+  /* Largeur du carrousel */
+  height: 300px;
+  /* Hauteur fixe du carrousel */
+  overflow: hidden;
+  /* Masque les images qui dépassent */
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-carousel 20s linear infinite;
+  /* Animation continue */
+}
+
+.carousel img {
+  flex-shrink: 0;
+  /* Empêche les images de se rétrécir */
+  height: 250%;
+  /* Remplir la hauteur du carrousel */
+  width: 29%;
+  /* Largeur des images */
+  object-fit: contain;
+  /* Contient les images sans déformation */
+}
+
+/* Animation pour le défilement continu */
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* Défilement horizontal sur tout le carrousel */
+  }
+}
